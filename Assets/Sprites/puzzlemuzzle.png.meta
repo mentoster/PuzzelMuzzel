@@ -77,6 +77,48 @@ TextureImporter:
   - first:
       213: 8945687921770918057
     second: puzzlemuzzle_24
+  - first:
+      213: 1046165732034703298
+    second: puzzlemuzzle_3
+  - first:
+      213: 1885819808175897898
+    second: puzzlemuzzle_0
+  - first:
+      213: 6234117543846668454
+    second: puzzlemuzzle_2
+  - first:
+      213: 3745520447020321381
+    second: puzzlemuzzle_4
+  - first:
+      213: 5302070996376146606
+    second: puzzlemuzzle_5
+  - first:
+      213: 194844488400107111
+    second: puzzlemuzzle_6
+  - first:
+      213: 8063823528508687323
+    second: puzzlemuzzle_8
+  - first:
+      213: 5731884026242978675
+    second: puzzlemuzzle_9
+  - first:
+      213: -271921305652309072
+    second: puzzlemuzzle_15
+  - first:
+      213: 2719132798969355101
+    second: puzzlemuzzle_17
+  - first:
+      213: 8074968017075040185
+    second: puzzlemuzzle_19
+  - first:
+      213: 7008573386910471967
+    second: puzzlemuzzle_22
+  - first:
+      213: -4102209711222070071
+    second: puzzlemuzzle_23
+  - first:
+      213: 8728257483591943698
+    second: puzzlemuzzle_25
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -106,7 +148,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 2
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -122,7 +164,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: 0
@@ -174,13 +216,265 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
+      name: puzzlemuzzle_1
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 860
+        width: 420
+        height: 417
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 171d91fc7f4511c30800000000000000
+      internalID: 4328334140187988337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: puzzlemuzzle_2
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 954
+        width: 200
+        height: 283
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a8e20950e8048650800000000000000
+      internalID: 6234117543846668454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: puzzlemuzzle_7
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 865
+        width: 375
+        height: 362
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04366b2787f44d8c0800000000000000
+      internalID: -3975465192322079936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: puzzlemuzzle_8
+      rect:
+        serializedVersion: 2
+        x: 1586
+        y: 860
+        width: 413
+        height: 393
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd3823476c478ef60800000000000000
+      internalID: 8063823528508687323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: puzzlemuzzle_12
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 842
+        width: 428
+        height: 425
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b2065fa2786eeb40800000000000000
+      internalID: 5471425439078941361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: puzzlemuzzle_15
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 507
+        width: 331
+        height: 332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b3dbb16301f93cf0800000000000000
+      internalID: -271921305652309072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: puzzlemuzzle_17
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 451
+        width: 235
+        height: 227
+      alignment: 9
+      pivot: {x: 1.3334622, y: 0.5157921}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5b9ea3cfdc4cb520800000000000000
+      internalID: 2719132798969355101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: puzzlemuzzle_19
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 328
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bfe566e0ac001070800000000000000
+      internalID: 8074968017075040185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: puzzlemuzzle_20
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 359
+        width: 510
+        height: 464
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9b235ae7071e6da0800000000000000
+      internalID: -5949792734946317414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: puzzlemuzzle_21
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 51
+        width: 371
+        height: 411
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d80d842413d72730800000000000000
+      internalID: 3974377279643781335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: puzzlemuzzle_23
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 111
+        width: 250
+        height: 289
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c4637880060217c0800000000000000
+      internalID: -4102209711222070071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: puzzlemuzzle_25
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 14
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21684a1efeff02970800000000000000
+      internalID: 8728257483591943698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
       name: puzzlemuzzle_0
       rect:
         serializedVersion: 2
-        x: 41
-        y: 865
-        width: 414
-        height: 432
+        x: 1062
+        y: 67
+        width: 178
+        height: 186
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,13 +489,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: puzzlemuzzle_2
+      name: puzzlemuzzle_3
       rect:
         serializedVersion: 2
-        x: 487
-        y: 950
-        width: 204
-        height: 295
+        x: 1705
+        y: 29
+        width: 221
+        height: 288
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,20 +503,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22f587ab5389fc900800000000000000
-      internalID: 706951023049596706
+      spriteID: 071f0b88489d512e0800000000000000
+      internalID: -2155577683374706320
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: puzzlemuzzle_6
+      name: puzzlemuzzle_4
       rect:
         serializedVersion: 2
-        x: 1189
-        y: 867
-        width: 388
-        height: 344
+        x: 417
+        y: 471
+        width: 293
+        height: 294
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -230,176 +524,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e903f1025bda7b30800000000000000
-      internalID: 4285979140662954468
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: puzzlemuzzle_8
-      rect:
-        serializedVersion: 2
-        x: 1588
-        y: 860
-        width: 413
-        height: 393
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fc8ea0672c414d3f0800000000000000
-      internalID: -877053201993766705
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: puzzlemuzzle_9
-      rect:
-        serializedVersion: 2
-        x: 747
-        y: 862
-        width: 430
-        height: 392
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0176ccbdae403c130800000000000000
-      internalID: 3585715135073511184
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: puzzlemuzzle_15
-      rect:
-        serializedVersion: 2
-        x: 82
-        y: 493
-        width: 359
-        height: 346
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 689e7a0e72cc554c0800000000000000
-      internalID: -4299305797610378874
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: puzzlemuzzle_17
-      rect:
-        serializedVersion: 2
-        x: 553
-        y: 511
-        width: 264
-        height: 279
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9ea3528dd659bf990800000000000000
-      internalID: -7351117667741910295
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: puzzlemuzzle_19
-      rect:
-        serializedVersion: 2
-        x: 958
-        y: 328
-        width: 494
-        height: 494
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9468edb74e2a71680800000000000000
-      internalID: -8784373445948438967
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: puzzlemuzzle_22
-      rect:
-        serializedVersion: 2
-        x: 61
-        y: 51
-        width: 371
-        height: 411
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 660cf0a0fb7dc4b70800000000000000
-      internalID: 8884713380402675814
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: puzzlemuzzle_23
-      rect:
-        serializedVersion: 2
-        x: 533
-        y: 108
-        width: 253
-        height: 292
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1f3b8013db6324ab0800000000000000
-      internalID: -5025394047992679439
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: puzzlemuzzle_1
-      rect:
-        serializedVersion: 2
-        x: 1195
-        y: 853
-        width: 205
-        height: 362
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 171d91fc7f4511c30800000000000000
-      internalID: 4328334140187988337
+      spriteID: 032c54aab7872bf80800000000000000
+      internalID: -8092273107898351056
       vertices: []
       indices: 
       edges: []
