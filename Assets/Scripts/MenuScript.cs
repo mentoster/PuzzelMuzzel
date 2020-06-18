@@ -1,38 +1,49 @@
-﻿using DG.Tweening;
-using Prime31;
+﻿using System;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
+
 public class MenuScript : MonoBehaviour
 {
-    
     public Camera Camera;
+    public int CameraSize = 5;
+
     #region GameObjects
+
+    public LoadManager SaveSystem;
     public GameObject StartMenu;
     public GameObject PlayMenu;
     public GameObject PauseMenu;
     public GameObject SettingMenu;
     public GameObject SettingFone;
     public GameObject StatMenu;
-    public GameObject Large3;
-    public GameObject Large4;
-    public GameObject Large5; 
-    
+    public GameObject winMenu;
+    public GameObject NightOn;
+    public GameObject DeleteImageTrash;
+    public GameObject YesDelete;
+    public GameObject soundOff;
+    private GameObject PuzzleBuff;
+    public GameObject[] PuzzlePrefabs;
+    public GameObject[] FonePuzzle;
+
     #endregion
+
+    public TMP_Text score;
     public TMP_Text LargeText;
     private int _PuzzleLarge = 3;
-    private bool _InGame=false;
-    private int _EscPressed=0;
-    private bool _BlackTheme = false;
-    public GameObject NightOn;
-    public float AnimDuration;
-    private GameObject[] PuzzleBuff;
-    private int PuzzleNow = 0;
+    private bool _InGame = false;
+    private int _EscPressed = 0;
+    public float animDuration;
+
+
     #region Sound
-    public GameObject SoundOff;
-    private bool _SoundCanPlay=true;
+
     private AudioSource _audioSource;
+
     #endregion
-     
+
+
     #region TouchControl
 
     public void TouchInput(int Direction)
@@ -40,91 +51,99 @@ public class MenuScript : MonoBehaviour
         switch (_PuzzleLarge)
         {
             case 3:
-                PuzzleBuff[PuzzleNow].GetComponent<PuzzleManagerLarge3>().Touch(Direction);
+                PuzzleBuff.GetComponent<PuzzleManagerLarge3>().Touch(Direction);
                 break;
             case 4:
-                PuzzleBuff[PuzzleNow].GetComponent<PuzzleManagerLarge4>().Touch(Direction);
+                PuzzleBuff.GetComponent<PuzzleManagerLarge4>().Touch(Direction);
                 break;
             case 5:
-                PuzzleBuff[PuzzleNow].GetComponent<PuzzleManager5>().Touch(Direction);
+                PuzzleBuff.GetComponent<PuzzleManager5>().Touch(Direction);
                 break;
             default:
-                PuzzleBuff[PuzzleNow].GetComponent<PuzzleManagerLarge3>().Touch(Direction);
+                PuzzleBuff.GetComponent<PuzzleManagerLarge3>().Touch(Direction);
                 break;
         }
-
     }
 
-   #endregion
-    
+    #endregion
+
     #region startAndUpdate
 
-      private void Start()
+    private void Start()
+    {
+        if (!SaveSystem.Sound)
         {
-            _audioSource = GetComponent<AudioSource>();
+            soundOff.SetActive(true);
+            AudioListener.volume = 1;
         }
-        private void Update()
+        else
         {
-            if(Input.GetKeyDown( KeyCode.Escape))
+            soundOff.SetActive(false);
+            AudioListener.volume = 0;
+        }
+
+        if (!SaveSystem.DarkTheme)
+        {
+            NightOn.SetActive(true);
+            Camera.backgroundColor = Color.black;
+        }
+
+        _audioSource = GetComponent<AudioSource>();
+    }
+
+    // press escape to pause
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (_EscPressed == 0)
             {
-                if (_InGame==true && _EscPressed == 1)
+                StatMenu.SetActive(false);
+                SettingFone.SetActive(false);
+                SettingMenu.SetActive(false);
+                if (_InGame == true)
                 {
-                    PauseMenu.SetActive(true);
+                    winMenu.SetActive(false);
+                    PauseMenu.SetActive(false);
+                    _EscPressed = 1;
+                    Camera.DOOrthoSize(CameraSize, 0.4f);
+                }
+                else
+                {
                     _EscPressed = 0;
                 }
-                if (_EscPressed == 0)
-                {
-                    
-                    StatMenu.SetActive(false);
-                    SettingFone.SetActive(false);
-                    SettingMenu.SetActive(false);
-                    StartMenu.SetActive(false);
-                    if (_InGame == true)
-                    {
-                        PlayMenu.SetActive(true);
-                        _EscPressed = 1;
-                    }
-                    else
-                    {
-                        StartMenu.SetActive(true);   
-                        _EscPressed = 0;
-                    }
-    
-                }
+            }
+            else
+            {
+                Camera.DOOrthoSize(CameraSize + 2, 0.4f);
+                PauseMenu.SetActive(true);
+                _EscPressed = 0;
             }
         }
+    }
 
     #endregion
-  
-    #region MenuButtons
-   public void onStartButton()
-   {
-       _audioSource.Play();
-       _InGame = true;
-       _EscPressed = 1;
-      StartMenu.SetActive(false);
-      PlayMenu.SetActive(true);
-      switch (_PuzzleLarge)
-      {
-          case 3:
-              Instantiate(Large3);
 
-              break;
-          case 4:
-              Instantiate(Large4);
-              break;
-          case 5:
-              Instantiate(Large5);
-              break;
-          default:
-              Instantiate(Large3);
-              break;
-      }
-      PuzzleBuff= GameObject.FindGameObjectsWithTag("Puzzle");
+    #region MenuButtons
+
+    public void onStartButton()
+    {
+        score.text = "0";
+        Camera.DOOrthoSize(CameraSize, 0.4f);
+        _audioSource.Play();
+        _InGame = true;
+        _EscPressed = 1;
+        SettingFone.SetActive(false);
+        StatMenu.SetActive(false);
+        SettingMenu.SetActive(false);
+        StartMenu.SetActive(false);
+        PlayMenu.SetActive(true);
+        PuzzleBuff = Instantiate(PuzzlePrefabs[_PuzzleLarge - 3]);
     }
 
     public void onSettingButton()
     {
+        StatMenu.SetActive(false);
         _audioSource.Play();
         SettingFone.SetActive(true);
         SettingMenu.SetActive(true);
@@ -132,8 +151,8 @@ public class MenuScript : MonoBehaviour
 
     public void onStatisticButton()
     {
-      
-        _audioSource.Play(); 
+        SettingMenu.SetActive(false);
+        _audioSource.Play();
         SettingFone.SetActive(true);
         StatMenu.SetActive(true);
     }
@@ -141,57 +160,56 @@ public class MenuScript : MonoBehaviour
     public void onLargeButton()
     {
         _audioSource.Play();
+        FonePuzzle[_PuzzleLarge - 3].SetActive(false);
         switch (_PuzzleLarge)
         {
             case 3:
                 _PuzzleLarge++;
+                CameraSize++;
                 break;
             case 4:
                 _PuzzleLarge++;
+                CameraSize++;
                 break;
             case 5:
-                _PuzzleLarge--; _PuzzleLarge--;
+                _PuzzleLarge--;
+                _PuzzleLarge--;
+                CameraSize--;
+                CameraSize--;
                 break;
             default:
                 _PuzzleLarge = 3;
+                CameraSize = 5;
                 break;
         }
-        LargeText.text = _PuzzleLarge + "x"+_PuzzleLarge;
+
+        Camera.DOOrthoSize(CameraSize, 0.4f);
+        FonePuzzle[_PuzzleLarge - 3].SetActive(true);
+        LargeText.text = _PuzzleLarge + "x" + _PuzzleLarge;
     }
 
-
-  
     #endregion
 
     #region GameButtons
 
-    
     public void onRestartButton()
     {
-        Destroy(PuzzleBuff[PuzzleNow]);
-        PuzzleNow++;
         _audioSource.Play();
-        switch (_PuzzleLarge)
-        {
-            case 3:
-                Instantiate(Large3);
-               break;
-            case 4:
-                Instantiate(Large4);
-                break;
-            case 5:
-                Instantiate(Large5);
-                break;
-            default:
-                Instantiate(Large3);
-                break;
-        }
+        SettingFone.SetActive(false);
+        SettingMenu.SetActive(false);
+        StatMenu.SetActive(false);
+        Camera.DOOrthoSize(CameraSize, 0.4f);
+        Camera.DOOrthoSize(5, 0.4f);
+        Destroy(PuzzleBuff);
+        score.text = "0";
+        PuzzleBuff = Instantiate(PuzzlePrefabs[_PuzzleLarge - 3]);
+        Camera.DOOrthoSize(CameraSize, 0.4f);
         PauseMenu.SetActive(false);
-        PuzzleBuff= GameObject.FindGameObjectsWithTag("Puzzle");
     }
 
     public void onHomeButton()
-    {      
+    {
+        Camera.DOOrthoSize(CameraSize, 0.4f);
         _audioSource.Play();
         foreach (var o in GameObject.FindGameObjectsWithTag("Puzzle")) Destroy(o);
         SettingFone.SetActive(false);
@@ -200,7 +218,8 @@ public class MenuScript : MonoBehaviour
         StartMenu.SetActive(true);
         PauseMenu.SetActive(false);
         PlayMenu.SetActive(false);
-        StartMenu.SetActive(true);   
+        winMenu.SetActive(false);
+        StartMenu.SetActive(true);
         _EscPressed = 0;
         _InGame = false;
     }
@@ -209,55 +228,79 @@ public class MenuScript : MonoBehaviour
     {
         _audioSource.Play();
     }
+
+    public void Win()
+    {
+        SettingFone.SetActive(true);
+        winMenu.SetActive(true);
+    }
+
     #endregion
-  
+
     #region Settings
 
     public void onSoundButton()
     {
         _audioSource.Play();
-        if (_SoundCanPlay)
+        if (!SaveSystem.Sound)
         {
+            soundOff.SetActive(false);
             AudioListener.volume = 0;
-            SoundOff.SetActive(true);
-            _SoundCanPlay = false;
         }
-       else
+        else
         {
-            _SoundCanPlay = true;
-            SoundOff.SetActive(false);
-             AudioListener.volume = 1;
+            soundOff.SetActive(true);
+            AudioListener.volume = 1;
         }
 
+        SaveSystem.Sound = !SaveSystem.Sound;
     }
+
     public void onGalleryButton()
     {
         _audioSource.Play();
     }
+
     public void onDarkThemeButton()
     {
-        
         _audioSource.Play();
-        if (_BlackTheme)
+        if (SaveSystem.DarkTheme == false)
         {
-            Camera.DOColor(Color.white, AnimDuration);
-            _BlackTheme = false;
-            NightOn.SetActive(false);
+            Camera.DOColor(Color.white, animDuration);
         }
         else
         {
-            NightOn.SetActive(true);
-            _BlackTheme = true;
-            Camera.DOColor(Color.black, AnimDuration);
+            Camera.DOColor(Color.black, animDuration);
         }
 
+        NightOn.SetActive(SaveSystem.DarkTheme);
+        SaveSystem.DarkTheme = !SaveSystem.DarkTheme;
+    }
+
+    public void onTrashButton()
+    {
+        _audioSource.Play();
+        DeleteImageTrash.SetActive(false);
+        YesDelete.SetActive(true);
+    }
+
+    public void NoDeleteButton()
+    {
+        _audioSource.Play();
+        YesDelete.SetActive(false);
+        DeleteImageTrash.SetActive(true);
+    }
+
+    public void YesDeleteButton()
+    {
+        _audioSource.Play();
+        YesDelete.SetActive(false);
+        DeleteImageTrash.SetActive(true);
     }
 
     public void onStarButton()
     {
-        
     }
-    
+
     #endregion
-  
 }

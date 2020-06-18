@@ -262,9 +262,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1185
-        y: 865
-        width: 375
-        height: 362
+        y: 864
+        width: 195
+        height: 363
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -526,6 +526,27 @@ TextureImporter:
       bones: []
       spriteID: 032c54aab7872bf80800000000000000
       internalID: -8092273107898351056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: puzzlemuzzle_5
+      rect:
+        serializedVersion: 2
+        x: 1397
+        y: 847
+        width: 165
+        height: 396
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eeb749df9c153d10800000000000000
+      internalID: 2104619873736310500
       vertices: []
       indices: 
       edges: []

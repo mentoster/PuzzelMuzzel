@@ -37,7 +37,13 @@ public class TKLSwipeDetector : MonoBehaviour
 	private SwipeDirection _swipeDetectionState;
 	// the current swipes that are still possibly valid
 	bool _didCompleteDetection = true;
+	private MenuScript _menuScript;
 
+
+	private void Start()
+	{
+		_menuScript = Menu.GetComponent<MenuScript>();
+	}
 
 	void Update()
 	{
@@ -111,10 +117,10 @@ public class TKLSwipeDetector : MonoBehaviour
 			{
 				if( yDeltaAbsCm < _allowedVariance )
 				{
-					Debug.Log("Left!");
+			
 					completedSwipeDirection = SwipeDirection.Left;
 					swipeVelocity = xDeltaAbsCm / ( Time.time - _startTime );
-				   Menu.GetComponent<MenuScript>().TouchInput(0);
+					_menuScript.TouchInput(0);
 					return true;
 				}
 
@@ -130,10 +136,10 @@ public class TKLSwipeDetector : MonoBehaviour
 			{
 				if( yDeltaAbsCm < _allowedVariance )
 				{
-					Debug.Log("Right!");
+				
 					completedSwipeDirection = SwipeDirection.Right;
 					swipeVelocity = xDeltaAbsCm / ( Time.time - _startTime );
-					Menu.GetComponent<MenuScript>().TouchInput(1);
+					_menuScript.TouchInput(1);
 					return true;
 				}
 
@@ -149,10 +155,10 @@ public class TKLSwipeDetector : MonoBehaviour
 			{
 				if( xDeltaAbsCm < _allowedVariance )
 				{
-					Debug.Log("up!");
+				
 					completedSwipeDirection = SwipeDirection.Up;
 					swipeVelocity = yDeltaAbsCm / ( Time.time - _startTime );
-					Menu.GetComponent<MenuScript>().TouchInput(2);
+					_menuScript.TouchInput(2);
 					return true;
 				}
 
@@ -168,10 +174,10 @@ public class TKLSwipeDetector : MonoBehaviour
 			{
 				if( xDeltaAbsCm < _allowedVariance )
 				{	
-					Debug.Log("Down!");
+			
 					completedSwipeDirection = SwipeDirection.Down;
 					swipeVelocity = yDeltaAbsCm / ( Time.time - _startTime );
-					Menu.GetComponent<MenuScript>().TouchInput(3);
+					_menuScript.TouchInput(3);
 					return true;
 				}
 
