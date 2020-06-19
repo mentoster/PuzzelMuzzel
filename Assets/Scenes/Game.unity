@@ -259,6 +259,8 @@ MonoBehaviour:
   - {fileID: 5840935609042937010}
   - {fileID: 7560929885386741995}
   - {fileID: 4139356418529739056}
+  LoadMan: {fileID: 2557914112454134844}
+  StatNumbers: {fileID: 1227750133}
   score: {fileID: 864144165}
   LargeText: {fileID: 91889022}
   animDuration: 0.5

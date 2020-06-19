@@ -15,7 +15,7 @@ public class PuzzleManagerLarge3 : MonoBehaviour
 
     //конец движения
     public Transform endPosition;
-
+    private LoadManager _loadManager;
     public float speed;
 
     //передача ID в fixedUpdate
@@ -33,6 +33,7 @@ public class PuzzleManagerLarge3 : MonoBehaviour
     {
         MenuScript = GameObject.Find("UI  + (GameManager)").GetComponent<MenuScript>();
         ScoreText = GameObject.Find("PointCounterText").GetComponent<TMP_Text>();
+        _loadManager = GameObject.Find("SaveLoadSystem").GetComponent<LoadManager>();
         GeneratePuzzle();
         _score = 0;
         _mMyAudioSource = GetComponent<AudioSource>();
@@ -45,7 +46,6 @@ public class PuzzleManagerLarge3 : MonoBehaviour
                 Vector2.Lerp(puzzle[_thisPuzzleId].transform.position, endPosition.position, speed);
         if (puzzle[_thisPuzzleId].transform.position == endPosition.position)
             _goRightNow = false;
-
     }
 
     public void Touch(int direction)
@@ -200,6 +200,7 @@ public class PuzzleManagerLarge3 : MonoBehaviour
         //puzzle[_thisPuzzleId].transform.DOMove(endPosition.position, speed);
         _goRightNow = true;
         //проверяем, решили ли мы правильно 
+        _loadManager.totalMoves++;
         CheckPuzzle();
     }
 
@@ -285,6 +286,7 @@ public class PuzzleManagerLarge3 : MonoBehaviour
     //функция при победе
     private void Win()
     {
+        _loadManager.numberOfWin++;
         MenuScript.Win();
     }
 

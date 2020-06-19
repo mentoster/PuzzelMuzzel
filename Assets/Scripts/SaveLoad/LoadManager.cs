@@ -4,11 +4,11 @@ using UnityEngine;
 public class LoadManager : MonoBehaviour
 {
     //write here the variables that you need to save 
-    public bool Sound=true;
-    public bool DarkTheme=false;
-    public int timeInGame=0;
-    public int totalMoves=0;
-    public int numberOfWin=0;
+    public bool Sound = true;
+    public bool DarkTheme = false;
+    public int timeInGame = 0;
+    public int totalMoves = 0;
+    public int numberOfWin = 0;
 
     public void Awake()
     {
@@ -19,17 +19,20 @@ public class LoadManager : MonoBehaviour
         totalMoves = data.totalMoves;
         numberOfWin = data.numberOfWin;
     }
- #if UNITY_ANDROID && !UNITY_EDITOR
+
+
+#if UNITY_ANDROID && !UNITY_EDITOR
     private void OnApplicationPause(bool pause)
-    {
+    { 
+timeInGame += (int) Time.time;
         if (pause)
             SaveSystem.SaveData(this);
+        timeInGame += (int) Time.time;
     }
 #endif
     private void OnApplicationQuit()
     {
+        timeInGame += (int) Time.time;
         SaveSystem.SaveData(this);
     }
 }
-
-

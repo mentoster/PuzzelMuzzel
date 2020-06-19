@@ -19,6 +19,8 @@ public class PuzzleManagerLarge4 : MonoBehaviour
 
     private int[,] position = {{0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}};
 
+    private LoadManager _loadManager;
+
     //конец движения
     public Transform endPosition;
 
@@ -38,6 +40,7 @@ public class PuzzleManagerLarge4 : MonoBehaviour
     {
         MenuScript = GameObject.Find("UI  + (GameManager)").GetComponent<MenuScript>();
         ScoreText = GameObject.Find("PointCounterText").GetComponent<TMP_Text>();
+        _loadManager = GameObject.Find("SaveLoadSystem").GetComponent<LoadManager>();
         _score = 0;
         _mMyAudioSource = GetComponent<AudioSource>();
         GeneratePuzzle();
@@ -188,6 +191,7 @@ public class PuzzleManagerLarge4 : MonoBehaviour
         //   puzzle[_thisPuzzleId].transform.DOMove(endPosition.position, speed);
         //проверяем, решили ли мы правильно 
         CheckPuzzle();
+        _loadManager.totalMoves++;
     }
 
     //проверяет ВЕСЬ ПАЗЛ на правильную комбинацию
@@ -291,6 +295,7 @@ public class PuzzleManagerLarge4 : MonoBehaviour
     //функция при победе
     private void Win()
     {
+        _loadManager.numberOfWin++;
         MenuScript.Win();
     }
 

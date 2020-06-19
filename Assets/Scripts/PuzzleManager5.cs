@@ -12,7 +12,7 @@ public class PuzzleManager5 : MonoBehaviour
     public const int fullPuzzleLarge = PuzzleLarge * PuzzleLarge;
     AudioSource _mMyAudioSource;
     public GameObject[] puzzle = new GameObject[9];
-
+    private LoadManager _loadManager;
     private int[,] position = {{0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}};
 
     //конец движения
@@ -34,6 +34,7 @@ public class PuzzleManager5 : MonoBehaviour
     {
         MenuScript = GameObject.Find("UI  + (GameManager)").GetComponent<MenuScript>();
         ScoreText = GameObject.Find("PointCounterText").GetComponent<TMP_Text>();
+        _loadManager = GameObject.Find("SaveLoadSystem").GetComponent<LoadManager>();
         _score = 0;
         _mMyAudioSource = GetComponent<AudioSource>();
         GeneratePuzzle();

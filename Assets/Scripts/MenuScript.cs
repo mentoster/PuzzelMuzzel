@@ -26,6 +26,8 @@ public class MenuScript : MonoBehaviour
     private GameObject PuzzleBuff;
     public GameObject[] PuzzlePrefabs;
     public GameObject[] FonePuzzle;
+    public LoadManager LoadMan;
+    public TMP_Text StatNumbers;
 
     #endregion
 
@@ -48,20 +50,23 @@ public class MenuScript : MonoBehaviour
 
     public void TouchInput(int Direction)
     {
-        switch (_PuzzleLarge)
+        if (_InGame)
         {
-            case 3:
-                PuzzleBuff.GetComponent<PuzzleManagerLarge3>().Touch(Direction);
-                break;
-            case 4:
-                PuzzleBuff.GetComponent<PuzzleManagerLarge4>().Touch(Direction);
-                break;
-            case 5:
-                PuzzleBuff.GetComponent<PuzzleManager5>().Touch(Direction);
-                break;
-            default:
-                PuzzleBuff.GetComponent<PuzzleManagerLarge3>().Touch(Direction);
-                break;
+            switch (_PuzzleLarge)
+            {
+                case 3:
+                    PuzzleBuff.GetComponent<PuzzleManagerLarge3>().Touch(Direction);
+                    break;
+                case 4:
+                    PuzzleBuff.GetComponent<PuzzleManagerLarge4>().Touch(Direction);
+                    break;
+                case 5:
+                    PuzzleBuff.GetComponent<PuzzleManager5>().Touch(Direction);
+                    break;
+                default:
+                    PuzzleBuff.GetComponent<PuzzleManagerLarge3>().Touch(Direction);
+                    break;
+            }
         }
     }
 
@@ -137,6 +142,7 @@ public class MenuScript : MonoBehaviour
         StatMenu.SetActive(false);
         SettingMenu.SetActive(false);
         StartMenu.SetActive(false);
+        winMenu.SetActive(false);
         PlayMenu.SetActive(true);
         PuzzleBuff = Instantiate(PuzzlePrefabs[_PuzzleLarge - 3]);
     }
@@ -147,6 +153,7 @@ public class MenuScript : MonoBehaviour
         _audioSource.Play();
         SettingFone.SetActive(true);
         SettingMenu.SetActive(true);
+        winMenu.SetActive(false);
     }
 
     public void onStatisticButton()
@@ -155,6 +162,13 @@ public class MenuScript : MonoBehaviour
         _audioSource.Play();
         SettingFone.SetActive(true);
         StatMenu.SetActive(true);
+        winMenu.SetActive(false);
+        //print data info
+        //transform seconds to date format
+        var ts = TimeSpan.FromSeconds(LoadMan.timeInGame + (int) Time.time);
+        //print info text
+        StatNumbers.text =
+            $"{ts.Hours}:{ts.Minutes}:{ts.Seconds}\n\n{LoadMan.totalMoves}\n\n{LoadMan.numberOfWin}\n\n\n";
     }
 
     public void onLargeButton()
@@ -227,7 +241,9 @@ public class MenuScript : MonoBehaviour
     public void onAdsButton()
     {
         _audioSource.Play();
+        //after ad we can replace 2 puzzles
     }
+    
 
     public void Win()
     {
