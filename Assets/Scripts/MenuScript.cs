@@ -2,7 +2,9 @@
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
+using UnityEngine.UI;
+using Random = UnityEngine.Random;
+
 
 public class MenuScript : MonoBehaviour
 {
@@ -28,6 +30,7 @@ public class MenuScript : MonoBehaviour
     public GameObject[] FonePuzzle;
     public LoadManager LoadMan;
     public TMP_Text StatNumbers;
+    public GameObject Gradient;
 
     #endregion
 
@@ -145,6 +148,7 @@ public class MenuScript : MonoBehaviour
         winMenu.SetActive(false);
         PlayMenu.SetActive(true);
         PuzzleBuff = Instantiate(PuzzlePrefabs[_PuzzleLarge - 3]);
+        staticsColor.RndPalleteColor =(byte) Random.Range(0, 3);
     }
 
     public void onSettingButton()
@@ -219,6 +223,7 @@ public class MenuScript : MonoBehaviour
         PuzzleBuff = Instantiate(PuzzlePrefabs[_PuzzleLarge - 3]);
         Camera.DOOrthoSize(CameraSize, 0.4f);
         PauseMenu.SetActive(false);
+        staticsColor.RndPalleteColor =(byte) Random.Range(0, 3);
     }
 
     public void onHomeButton()
@@ -238,12 +243,14 @@ public class MenuScript : MonoBehaviour
         _InGame = false;
     }
 
+
     public void onAdsButton()
     {
         _audioSource.Play();
         //after ad we can replace 2 puzzles
+        statics.pressAD = true;
     }
-    
+
 
     public void Win()
     {
@@ -275,6 +282,8 @@ public class MenuScript : MonoBehaviour
     public void onGalleryButton()
     {
         _audioSource.Play();
+        Gradient.SetActive(staticsColor.UseMaterial);
+        staticsColor.UseMaterial = !staticsColor.UseMaterial;
     }
 
     public void onDarkThemeButton()
@@ -312,6 +321,9 @@ public class MenuScript : MonoBehaviour
         _audioSource.Play();
         YesDelete.SetActive(false);
         DeleteImageTrash.SetActive(true);
+        LoadMan.totalMoves = 0;
+        LoadMan.numberOfWin = 0;
+        LoadMan.timeInGame = 0;
     }
 
     public void onStarButton()

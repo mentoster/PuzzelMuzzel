@@ -93,17 +93,65 @@ public class PuzzleManagerLarge3 : MonoBehaviour
     {
         //правильная комбинация для выйграша
         int[] adress = {2, 5, 8, 1, 4, 7, 0, 3, 6};
-
         if (!autoWin)
-        {
             //перемешка случайным образом массив adress
             Shuffle(adress);
-        }
-
         for (int i = 0; i < 9; i++)
-        {
             PasteOnPosition(puzzle[i], adress[i], i);
+    }
+
+    public void onAdPuzlleClick(GameObject itPuzzle, int id)
+    {
+        if (statics.pressAD)
+        {
+            var colorPuzzle = itPuzzle.GetComponent<SpriteRenderer>().color;
+            itPuzzle.GetComponent<SpriteRenderer>().color =
+                new Color(0.5f, 0.5f, 0.5f, 0.5f);
+            statics.PuzzlesNow++;
+            // if we select 2 puzzles, we change they positions
+            if (statics.PuzzlesNow == 2)
+            {
+                statics.SelectPuzzles.GetComponent<SpriteRenderer>().color =
+                    new Color(colorPuzzle.r, colorPuzzle.g, colorPuzzle.b, 1);
+                itPuzzle.GetComponent<SpriteRenderer>().color =
+                    new Color(colorPuzzle.r, colorPuzzle.g, colorPuzzle.b, 1);
+
+                statics.pressAD = false;
+                statics.PuzzlesNow = 0;
+                int x = 0, y = 0;
+                for (int i = 0; i < 3; i++)
+                for (int t = 0; t < 3; t++)
+                    if (position[i, t] == id)
+                    {
+                        x = i;
+                        y = t;
+                    }
+                bool stop =true;
+                for (int i = 0; i < 3; i++)
+                for (int t = 0; t < 3; t++)
+                    if (position[i, t] == statics.SelectPuzzlesID&&stop)
+                    {
+                        position[i, t] = id;
+                        position[x, y] = statics.SelectPuzzlesID;
+                        puzzle[id].transform
+                            .DOMove(new Vector2(RealPosition(i), RealPosition(t)), speed);
+                        puzzle[statics.SelectPuzzlesID].transform
+                            .DOMove(new Vector2(RealPosition(x), RealPosition(y)), speed);
+                        Debug.Log($"{i},{t},,,{x},{i}");
+                        stop = false;
+                        break;
+                    }
+
+                statics.pressAD = false;
+                statics.PuzzlesNow = 0;
+            }
+            else
+            {
+                statics.SelectPuzzles = itPuzzle;
+                statics.SelectPuzzlesID = id;
+            }
         }
+        else OnPuzzleClick(id);
     }
 
     public void OnPuzzleClick(int id)

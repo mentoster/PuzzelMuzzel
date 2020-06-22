@@ -990,8 +990,8 @@ MonoBehaviour:
   - {fileID: 1620523316644181579}
   - {fileID: 1620523316535308425}
   endPosition: {fileID: 1620523317048872766}
-  speed: 0.2
-  autoWin: 1
+  speed: 0.3
+  autoWin: 0
 --- !u!1 &1620523315469695671
 GameObject:
   m_ObjectHideFlags: 0
@@ -1002,6 +1002,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1620523315469695670}
   - component: {fileID: 1620523315469695691}
+  - component: {fileID: 817164872464902012}
+  - component: {fileID: 5579723576152735507}
+  - component: {fileID: 7526141931079281966}
   m_Layer: 0
   m_Name: 16,1
   m_TagString: Untagged
@@ -1075,6 +1078,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &817164872464902012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523315469695671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e06eb5ba7332184490cfab04018471f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PuzzleManager: {fileID: 1620523315084162625}
+  ID: 1
+--- !u!61 &5579723576152735507
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523315469695671}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.94, y: 4.94}
+    newSize: {x: 4.94, y: 4.94}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.94, y: 4.94}
+  m_EdgeRadius: 0
+--- !u!114 &7526141931079281966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523315469695671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36e6a41796f58674aa3ad36f0341a25e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsThisImage: 0
+  ID: 0
+  large: 14
 --- !u!1 &1620523315598864229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1085,6 +1143,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1620523315598864228}
   - component: {fileID: 1620523315598864249}
+  - component: {fileID: 7027057329145277057}
+  - component: {fileID: 7636964820820625721}
+  - component: {fileID: 654483176850928956}
   m_Layer: 0
   m_Name: 16,9
   m_TagString: Untagged
@@ -1158,6 +1219,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7027057329145277057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523315598864229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e06eb5ba7332184490cfab04018471f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PuzzleManager: {fileID: 1620523315084162625}
+  ID: 9
+--- !u!61 &7636964820820625721
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523315598864229}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.94, y: 4.94}
+    newSize: {x: 4.94, y: 4.94}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.94, y: 4.94}
+  m_EdgeRadius: 0
+--- !u!114 &654483176850928956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523315598864229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36e6a41796f58674aa3ad36f0341a25e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsThisImage: 0
+  ID: 8
+  large: 14
 --- !u!1 &1620523315714647233
 GameObject:
   m_ObjectHideFlags: 0
@@ -1168,6 +1284,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1620523315714647232}
   - component: {fileID: 1620523315714647237}
+  - component: {fileID: 3107100558048289825}
+  - component: {fileID: 3404830789122216361}
+  - component: {fileID: 1156005981428151021}
   m_Layer: 0
   m_Name: 16,10
   m_TagString: Untagged
@@ -1241,6 +1360,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3107100558048289825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523315714647233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e06eb5ba7332184490cfab04018471f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PuzzleManager: {fileID: 1620523315084162625}
+  ID: 10
+--- !u!61 &3404830789122216361
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523315714647233}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.94, y: 4.94}
+    newSize: {x: 4.94, y: 4.94}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.94, y: 4.94}
+  m_EdgeRadius: 0
+--- !u!114 &1156005981428151021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523315714647233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36e6a41796f58674aa3ad36f0341a25e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsThisImage: 0
+  ID: 9
+  large: 14
 --- !u!1 &1620523315882218120
 GameObject:
   m_ObjectHideFlags: 0
@@ -1251,6 +1425,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1620523315882218123}
   - component: {fileID: 1620523315882218124}
+  - component: {fileID: 6322709040965954682}
+  - component: {fileID: 5640768712484240790}
+  - component: {fileID: 1771546985269472325}
   m_Layer: 0
   m_Name: 16,2
   m_TagString: Untagged
@@ -1324,6 +1501,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6322709040965954682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523315882218120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e06eb5ba7332184490cfab04018471f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PuzzleManager: {fileID: 1620523315084162625}
+  ID: 2
+--- !u!61 &5640768712484240790
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523315882218120}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.94, y: 4.94}
+    newSize: {x: 4.94, y: 4.94}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.94, y: 4.94}
+  m_EdgeRadius: 0
+--- !u!114 &1771546985269472325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523315882218120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36e6a41796f58674aa3ad36f0341a25e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsThisImage: 0
+  ID: 1
+  large: 14
 --- !u!1 &1620523316081765424
 GameObject:
   m_ObjectHideFlags: 0
@@ -1334,6 +1566,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1620523316081765427}
   - component: {fileID: 1620523316081765428}
+  - component: {fileID: 2574742594415430435}
+  - component: {fileID: 4454406406353522471}
+  - component: {fileID: 3064549657584689724}
   m_Layer: 0
   m_Name: 16,4
   m_TagString: Untagged
@@ -1407,6 +1642,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2574742594415430435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523316081765424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e06eb5ba7332184490cfab04018471f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PuzzleManager: {fileID: 1620523315084162625}
+  ID: 4
+--- !u!61 &4454406406353522471
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523316081765424}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.94, y: 4.94}
+    newSize: {x: 4.94, y: 4.94}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.94, y: 4.94}
+  m_EdgeRadius: 0
+--- !u!114 &3064549657584689724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523316081765424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36e6a41796f58674aa3ad36f0341a25e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsThisImage: 0
+  ID: 3
+  large: 14
 --- !u!1 &1620523316101187308
 GameObject:
   m_ObjectHideFlags: 0
@@ -1417,6 +1707,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1620523316101187311}
   - component: {fileID: 1620523316101187296}
+  - component: {fileID: 3962029776691586244}
+  - component: {fileID: 1213961896746427218}
+  - component: {fileID: 175385928426751103}
   m_Layer: 0
   m_Name: 16,5
   m_TagString: Untagged
@@ -1490,6 +1783,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3962029776691586244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523316101187308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e06eb5ba7332184490cfab04018471f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PuzzleManager: {fileID: 1620523315084162625}
+  ID: 5
+--- !u!61 &1213961896746427218
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523316101187308}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.94, y: 4.94}
+    newSize: {x: 4.94, y: 4.94}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.94, y: 4.94}
+  m_EdgeRadius: 0
+--- !u!114 &175385928426751103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523316101187308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36e6a41796f58674aa3ad36f0341a25e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsThisImage: 0
+  ID: 4
+  large: 14
 --- !u!1 &1620523316115758807
 GameObject:
   m_ObjectHideFlags: 0
@@ -1500,6 +1848,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1620523316115758806}
   - component: {fileID: 1620523316115758827}
+  - component: {fileID: 3556961000075318110}
+  - component: {fileID: 3733918914440930870}
+  - component: {fileID: 3331712670792456625}
   m_Layer: 0
   m_Name: 16,3
   m_TagString: Untagged
@@ -1573,6 +1924,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3556961000075318110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523316115758807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e06eb5ba7332184490cfab04018471f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PuzzleManager: {fileID: 1620523315084162625}
+  ID: 3
+--- !u!61 &3733918914440930870
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523316115758807}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.94, y: 4.94}
+    newSize: {x: 4.94, y: 4.94}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.94, y: 4.94}
+  m_EdgeRadius: 0
+--- !u!114 &3331712670792456625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523316115758807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36e6a41796f58674aa3ad36f0341a25e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsThisImage: 0
+  ID: 2
+  large: 14
 --- !u!1 &1620523316243742092
 GameObject:
   m_ObjectHideFlags: 0
@@ -1583,6 +1989,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1620523316243742095}
   - component: {fileID: 1620523316243742080}
+  - component: {fileID: 6377212449215977082}
+  - component: {fileID: 3741080273579743425}
+  - component: {fileID: 8820054342566520394}
   m_Layer: 0
   m_Name: 16,8
   m_TagString: Untagged
@@ -1656,6 +2065,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6377212449215977082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523316243742092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e06eb5ba7332184490cfab04018471f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PuzzleManager: {fileID: 1620523315084162625}
+  ID: 8
+--- !u!61 &3741080273579743425
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523316243742092}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.94, y: 4.94}
+    newSize: {x: 4.94, y: 4.94}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.94, y: 4.94}
+  m_EdgeRadius: 0
+--- !u!114 &8820054342566520394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523316243742092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36e6a41796f58674aa3ad36f0341a25e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsThisImage: 0
+  ID: 7
+  large: 14
 --- !u!1 &1620523316249629056
 GameObject:
   m_ObjectHideFlags: 0
@@ -1666,6 +2130,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1620523316249629059}
   - component: {fileID: 1620523316249629060}
+  - component: {fileID: 2863059913112591080}
+  - component: {fileID: 2316427780087802751}
+  - component: {fileID: 6061031852531043119}
   m_Layer: 0
   m_Name: 16,12
   m_TagString: Untagged
@@ -1739,6 +2206,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2863059913112591080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523316249629056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e06eb5ba7332184490cfab04018471f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PuzzleManager: {fileID: 1620523315084162625}
+  ID: 12
+--- !u!61 &2316427780087802751
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523316249629056}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.94, y: 4.94}
+    newSize: {x: 4.94, y: 4.94}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.94, y: 4.94}
+  m_EdgeRadius: 0
+--- !u!114 &6061031852531043119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523316249629056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36e6a41796f58674aa3ad36f0341a25e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsThisImage: 0
+  ID: 11
+  large: 14
 --- !u!1 &1620523316357033595
 GameObject:
   m_ObjectHideFlags: 0
@@ -1749,6 +2271,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1620523316357033594}
   - component: {fileID: 1620523316357033599}
+  - component: {fileID: 1933697263421421779}
+  - component: {fileID: 2244081508561527842}
+  - component: {fileID: 1833563002603490065}
   m_Layer: 0
   m_Name: 16,11
   m_TagString: Untagged
@@ -1822,6 +2347,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1933697263421421779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523316357033595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e06eb5ba7332184490cfab04018471f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PuzzleManager: {fileID: 1620523315084162625}
+  ID: 11
+--- !u!61 &2244081508561527842
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523316357033595}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.94, y: 4.94}
+    newSize: {x: 4.94, y: 4.94}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.94, y: 4.94}
+  m_EdgeRadius: 0
+--- !u!114 &1833563002603490065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523316357033595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36e6a41796f58674aa3ad36f0341a25e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsThisImage: 0
+  ID: 10
+  large: 14
 --- !u!1 &1620523316498460464
 GameObject:
   m_ObjectHideFlags: 0
@@ -1832,6 +2412,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1620523316498460467}
   - component: {fileID: 1620523316498460468}
+  - component: {fileID: 7813572139404826315}
+  - component: {fileID: 9102680922762806472}
+  - component: {fileID: 851658077179658566}
   m_Layer: 0
   m_Name: 16,6
   m_TagString: Untagged
@@ -1905,6 +2488,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7813572139404826315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523316498460464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e06eb5ba7332184490cfab04018471f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PuzzleManager: {fileID: 1620523315084162625}
+  ID: 6
+--- !u!61 &9102680922762806472
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523316498460464}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.94, y: 4.94}
+    newSize: {x: 4.94, y: 4.94}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.94, y: 4.94}
+  m_EdgeRadius: 0
+--- !u!114 &851658077179658566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523316498460464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36e6a41796f58674aa3ad36f0341a25e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsThisImage: 0
+  ID: 5
+  large: 14
 --- !u!1 &1620523316535308425
 GameObject:
   m_ObjectHideFlags: 0
@@ -1915,6 +2553,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1620523316535308424}
   - component: {fileID: 1620523316535308429}
+  - component: {fileID: 3613612736792986569}
+  - component: {fileID: 6742182819220230678}
+  - component: {fileID: 4503983150910972060}
   m_Layer: 0
   m_Name: 16,15
   m_TagString: Untagged
@@ -1988,6 +2629,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3613612736792986569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523316535308425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e06eb5ba7332184490cfab04018471f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PuzzleManager: {fileID: 1620523315084162625}
+  ID: 15
+--- !u!61 &6742182819220230678
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523316535308425}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.94, y: 4.94}
+    newSize: {x: 4.94, y: 4.94}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.94, y: 4.94}
+  m_EdgeRadius: 0
+--- !u!114 &4503983150910972060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523316535308425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36e6a41796f58674aa3ad36f0341a25e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsThisImage: 0
+  ID: 14
+  large: 14
 --- !u!1 &1620523316628303507
 GameObject:
   m_ObjectHideFlags: 0
@@ -1998,6 +2694,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1620523316628303506}
   - component: {fileID: 1620523316628303511}
+  - component: {fileID: 2100654429059145654}
+  - component: {fileID: 8057247125586496905}
+  - component: {fileID: 3653522453648689157}
   m_Layer: 0
   m_Name: 16,7
   m_TagString: Untagged
@@ -2071,6 +2770,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2100654429059145654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523316628303507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e06eb5ba7332184490cfab04018471f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PuzzleManager: {fileID: 1620523315084162625}
+  ID: 7
+--- !u!61 &8057247125586496905
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523316628303507}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.94, y: 4.94}
+    newSize: {x: 4.94, y: 4.94}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.94, y: 4.94}
+  m_EdgeRadius: 0
+--- !u!114 &3653522453648689157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523316628303507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36e6a41796f58674aa3ad36f0341a25e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsThisImage: 0
+  ID: 6
+  large: 14
 --- !u!1 &1620523316644181579
 GameObject:
   m_ObjectHideFlags: 0
@@ -2081,6 +2835,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1620523316644181578}
   - component: {fileID: 1620523316644181583}
+  - component: {fileID: 6030736555094426037}
+  - component: {fileID: 1291108054139359166}
+  - component: {fileID: 2184711917557268159}
   m_Layer: 0
   m_Name: 16,14
   m_TagString: Untagged
@@ -2154,6 +2911,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6030736555094426037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523316644181579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e06eb5ba7332184490cfab04018471f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PuzzleManager: {fileID: 1620523315084162625}
+  ID: 14
+--- !u!61 &1291108054139359166
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523316644181579}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.94, y: 4.94}
+    newSize: {x: 4.94, y: 4.94}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.94, y: 4.94}
+  m_EdgeRadius: 0
+--- !u!114 &2184711917557268159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523316644181579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36e6a41796f58674aa3ad36f0341a25e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsThisImage: 0
+  ID: 13
+  large: 14
 --- !u!1 &1620523317010201052
 GameObject:
   m_ObjectHideFlags: 0
@@ -2164,6 +2976,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1620523317010201055}
   - component: {fileID: 1620523317010201040}
+  - component: {fileID: 6315796525255424829}
+  - component: {fileID: 4090405743718948180}
+  - component: {fileID: 7455117199759546404}
   m_Layer: 0
   m_Name: 16,13
   m_TagString: Untagged
@@ -2237,6 +3052,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6315796525255424829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523317010201052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e06eb5ba7332184490cfab04018471f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PuzzleManager: {fileID: 1620523315084162625}
+  ID: 13
+--- !u!61 &4090405743718948180
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523317010201052}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.94, y: 4.94}
+    newSize: {x: 4.94, y: 4.94}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.94, y: 4.94}
+  m_EdgeRadius: 0
+--- !u!114 &7455117199759546404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620523317010201052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36e6a41796f58674aa3ad36f0341a25e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsThisImage: 0
+  ID: 12
+  large: 14
 --- !u!1 &1620523317048872767
 GameObject:
   m_ObjectHideFlags: 0

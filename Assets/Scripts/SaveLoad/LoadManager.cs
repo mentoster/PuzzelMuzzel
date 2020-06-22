@@ -20,16 +20,15 @@ public class LoadManager : MonoBehaviour
         numberOfWin = data.numberOfWin;
     }
 
-
-#if UNITY_ANDROID && !UNITY_EDITOR
+    
     private void OnApplicationPause(bool pause)
     { 
-timeInGame += (int) Time.time;
+        timeInGame += (int) Time.time;
         if (pause)
             SaveSystem.SaveData(this);
         timeInGame += (int) Time.time;
     }
-#endif
+
     private void OnApplicationQuit()
     {
         timeInGame += (int) Time.time;

@@ -7,15 +7,27 @@ public static class SaveSystem
     public static void SaveData(LoadManager loadManager)
     {
         BinaryFormatter formatter = new BinaryFormatter();
+
+#if UNITY_ANDROID && !UNITY_EDITOR
+        string dataPath = Application.persistentDataPath + "/save.mlya";
+#else
         string dataPath = Application.dataPath + "/save.mlya";
+#endif
+
         FileStream stream = new FileStream(dataPath, FileMode.Create);
         GameData data = new GameData(loadManager);
         formatter.Serialize(stream, data);
         stream.Close();
     }
+
     public static GameData LoadSave()
     {
+#if UNITY_ANDROID && !UNITY_EDITOR
+             string dataPath = Application.persistentDataPath + "/save.mlya";
+#else
         string dataPath = Application.dataPath + "/save.mlya";
+#endif
+
         if (File.Exists(dataPath))
         {
             BinaryFormatter formatter = new BinaryFormatter();
@@ -29,6 +41,5 @@ public static class SaveSystem
             Debug.LogError("Save file not found in " + dataPath);
             return null;
         }
-
     }
 }
