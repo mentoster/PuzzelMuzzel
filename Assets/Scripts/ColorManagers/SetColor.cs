@@ -3,9 +3,9 @@ using UnityEngine.UI;
 
 public class SetColor : MonoBehaviour
 {
-    public bool IsThisImage = false;
-    public byte ID;
-    public byte large = 1;
+    [SerializeField] private bool IsThisImage = false;
+    [SerializeField] private byte ID;
+    [SerializeField] private byte large = 1;
 
     void Start()
     {

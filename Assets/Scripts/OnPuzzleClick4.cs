@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class OnPuzzleClick4 : MonoBehaviour
 {
-    public PuzzleManagerLarge4 PuzzleManager;
-    public int ID;
+    [SerializeField]private PuzzleManagerLarge4 PuzzleManager;
+    [SerializeField]private int ID;
 
     private void OnMouseDown()
     {

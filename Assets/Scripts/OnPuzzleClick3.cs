@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class OnPuzzleClick3 : MonoBehaviour
 {
-    public PuzzleManagerLarge3 PuzzleManager;
-    public int ID;
+    [SerializeField]private PuzzleManagerLarge3 PuzzleManager;
+    [SerializeField]private int ID;
 
     private void OnMouseDown()
     {

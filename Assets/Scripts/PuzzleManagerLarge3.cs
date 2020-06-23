@@ -8,25 +8,25 @@ using Random = UnityEngine.Random;
 
 public class PuzzleManagerLarge3 : MonoBehaviour
 {
-    AudioSource _mMyAudioSource;
-    public GameObject[] puzzle = new GameObject[9];
+    private AudioSource _mMyAudioSource;
+    [SerializeField] private GameObject[] puzzle = new GameObject[9];
 
     private int[,] position = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
 
     //конец движения
-    public Transform endPosition;
+    [SerializeField]private Transform endPosition;
     private LoadManager _loadManager;
-    public float speed;
+    [SerializeField]private float speed;
 
     //передача ID в fixedUpdate
     private int _thisPuzzleId;
     private bool _goRightNow;
-    public const float positionDifference = 1;
+    [SerializeField]private const float positionDifference = 1;
     private TMP_Text ScoreText;
     private int _score = 0;
     private int _zeroPosX;
     private int _zeroPosY;
-    public bool autoWin;
+    [SerializeField] private bool autoWin;
     private MenuScript MenuScript;
 
     private void Start()
@@ -126,10 +126,11 @@ public class PuzzleManagerLarge3 : MonoBehaviour
                         x = i;
                         y = t;
                     }
-                bool stop =true;
+
+                bool stop = true;
                 for (int i = 0; i < 3; i++)
                 for (int t = 0; t < 3; t++)
-                    if (position[i, t] == statics.SelectPuzzlesID&&stop)
+                    if (position[i, t] == statics.SelectPuzzlesID && stop)
                     {
                         position[i, t] = id;
                         position[x, y] = statics.SelectPuzzlesID;
@@ -137,7 +138,6 @@ public class PuzzleManagerLarge3 : MonoBehaviour
                             .DOMove(new Vector2(RealPosition(i), RealPosition(t)), speed);
                         puzzle[statics.SelectPuzzlesID].transform
                             .DOMove(new Vector2(RealPosition(x), RealPosition(y)), speed);
-                        Debug.Log($"{i},{t},,,{x},{i}");
                         stop = false;
                         break;
                     }

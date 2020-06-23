@@ -50,7 +50,10 @@ public class MenuScript : MonoBehaviour
 
 
     #region TouchControl
-
+    private void Awake()
+    {
+        Application.targetFrameRate = 60;
+    }
     public void TouchInput(int Direction)
     {
         if (_InGame)
