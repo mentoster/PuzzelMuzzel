@@ -1,13 +1,11 @@
 ﻿using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
-
 public static class SaveSystem
 {
     public static void SaveData(LoadManager loadManager)
     {
         BinaryFormatter formatter = new BinaryFormatter();
-
 #if UNITY_ANDROID && !UNITY_EDITOR
         string dataPath = Application.persistentDataPath + "/save.mlya";
 #else
@@ -19,7 +17,6 @@ public static class SaveSystem
         formatter.Serialize(stream, data);
         stream.Close();
     }
-
     public static GameData LoadSave()
     {
 #if UNITY_ANDROID && !UNITY_EDITOR

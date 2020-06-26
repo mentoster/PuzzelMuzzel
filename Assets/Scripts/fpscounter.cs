@@ -1,5 +1,8 @@
-﻿﻿using UnityEngine;
-using System.Collections;
+﻿﻿// Author: Daniele Giardini http://www.demigiant.com
+// Created: 2018/07/13
+
+using UnityEngine;
+
 
 // An FPS counter.
 // It calculates frames/second over each updateInterval,
@@ -16,20 +19,18 @@ public class fpscounter : MonoBehaviour
         frames = 0;
     }
 
-    void OnGUI()
-    {
-        GUILayout.Label("" + fps.ToString("f2"));
-    }
+    void OnGUI() => GUILayout.Label("" + fps.ToString("f2"));
 
     void Update()
     {
         ++frames;
-        float timeNow = Time.realtimeSinceStartup;
+        var timeNow = Time.realtimeSinceStartup;
         if (timeNow > lastInterval + updateInterval)
         {
             fps = (float)(frames / (timeNow - lastInterval));
             frames = 0;
             lastInterval = timeNow;
         }
+
     }
 }

@@ -572,6 +572,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: puzzlemuzzle_9
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 788
+        width: 292
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 7, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0176ccbdae403c130800000000000000
+      internalID: 3585715135073511184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline:
     - - {x: -682, y: -499}
       - {x: -600, y: -337}
