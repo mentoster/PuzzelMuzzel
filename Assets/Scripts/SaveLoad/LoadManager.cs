@@ -19,7 +19,7 @@ public class LoadManager : MonoBehaviour {
         totalMoves = data.totalMoves;
         numberOfWin = data.numberOfWin;
         frstStart = data.frstStart;
-        settingFrstStart=data.settingFrstStart;
+        settingFrstStart = data.settingFrstStart;
     }
     private void OnApplicationPause (bool pause) {
         if (pause)
