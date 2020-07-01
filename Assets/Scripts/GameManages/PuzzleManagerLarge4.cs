@@ -41,38 +41,7 @@ public class PuzzleManagerLarge4 : MonoBehaviour {
     #region puzzleFucntions
 
     // перемещает пазл
-    public void Touch (int direction) {
-        switch (direction) {
-            //left
-            case 0:
-                if (_zeroPosX + 1 < PuzzleLarge) {
-                    OnPuzzleClick (position[_zeroPosX + 1, _zeroPosY]);
-                }
 
-                break;
-                //right
-            case 1:
-                if (_zeroPosX - 1 >= 0) {
-                    OnPuzzleClick (position[_zeroPosX - 1, _zeroPosY]);
-                }
-
-                break;
-                //up
-            case 2:
-                if (_zeroPosY - 1 >= 0) {
-                    OnPuzzleClick (position[_zeroPosX, _zeroPosY - 1]);
-                }
-
-                break;
-                //down
-            case 3:
-                if (_zeroPosY + 1 < PuzzleLarge) {
-                    OnPuzzleClick (position[_zeroPosX, _zeroPosY + 1]);
-                }
-
-                break;
-        }
-    }
     public void onAdPuzlleClick (GameObject itPuzzle, int id) {
         if (statics.pressAD) {
             var colorPuzzle = itPuzzle.GetComponent<SpriteRenderer> ().color;

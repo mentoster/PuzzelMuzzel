@@ -54,24 +54,6 @@ public class MenuScript : MonoBehaviour {
 
 	#region TouchControl
 	private void Awake () => Application.targetFrameRate = 60;
-	public void TouchInput (int Direction) {
-		if (_InGame) {
-			switch (_PuzzleLarge) {
-				case 3:
-					PuzzleBuff.GetComponent<PuzzleManagerLarge3> ().Touch (Direction);
-					break;
-				case 4:
-					PuzzleBuff.GetComponent<PuzzleManagerLarge4> ().Touch (Direction);
-					break;
-				case 5:
-					PuzzleBuff.GetComponent<PuzzleManager5> ().Touch (Direction);
-					break;
-				default:
-					PuzzleBuff.GetComponent<PuzzleManagerLarge3> ().Touch (Direction);
-					break;
-			}
-		}
-	}
 
 	#endregion
 
@@ -178,14 +160,7 @@ public class MenuScript : MonoBehaviour {
 		var ts = TimeSpan.FromSeconds (SaveSystem.timeInGame + (int) Time.time);
 		//print info text
 		StatNumbers.text =
-			$@"{ts.Hours}:{ts.Minutes}:{ts.Seconds}
-
-{SaveSystem.totalMoves}
-
-{SaveSystem.numberOfWin}
-
-
-";
+			$"{ts.Hours}:{ts.Minutes}:{ts.Seconds}\r\n\r\n{SaveSystem.totalMoves}\r\n\r\n{SaveSystem.numberOfWin}\r\n\r\n\r\n";
 	}
 
 	public void onLargeButton () {
@@ -256,16 +231,17 @@ public class MenuScript : MonoBehaviour {
 	public void onAdsButton () {
 		_audioSource.Play ();
 		//after ad we can replace 2 puzzles
-		statics.pressAD = true;
 		const string RewardedZoneId = "rewardedVideo";
-		if (!Advertisement.IsReady (RewardedZoneId)) {
-			Debug.Log (string.Format ("Ads not ready for zone '{0}'", RewardedZoneId));
-			return;
+		if (Advertisement.IsReady (RewardedZoneId)) {
+			Advertisement.Show (RewardedZoneId);
+			statics.pressAD = true;
 		}
-		Advertisement.Show (RewardedZoneId);
-		statics.pressAD = true;
-	}
 
+	}
+	public void onTutorialButton () {
+		_tutorial.SetActive (true);
+		_settingGameTutorial.SetActive (true);
+	}
 	public void Win () {
 		if (!_WinAlready) {
 			_WinAlready = true;
