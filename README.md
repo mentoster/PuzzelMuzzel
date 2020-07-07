@@ -19,11 +19,4 @@ Put your photo on the puzzle, and collect the puzzle from the photo
 - Use the back gesture to exit back.
 - Dont smoke!
 ## Screenshots
-- ![1](https://media.githubusercontent.com/media/mentoster/PuzzelMuzzel/master/Screenshots/Screenshot_20200701-134955.jpg?token=AMCAHKRVRISVY26BW5D4ZUK7ABUOI)
- - ![2](https://media.githubusercontent.com/media/mentoster/PuzzelMuzzel/master/Screenshots/Screenshot_20200701-135020.jpg?token=AMCAHKVUY5DA6T7CGYQTAOS7ABUXS)
-- ![3](https://media.githubusercontent.com/media/mentoster/PuzzelMuzzel/master/Screenshots/Screenshot_20200701-135026.jpg?token=AMCAHKS564CNKT73NW6EBKK7ABUYC)
-- ![4](https://media.githubusercontent.com/media/mentoster/PuzzelMuzzel/master/Screenshots/Screenshot_20200701-135032.jpg?token=AMCAHKWGNZ4HGJWOQLT3FPK7ABUYS)
-- ![5](https://media.githubusercontent.com/media/mentoster/PuzzelMuzzel/master/Screenshots/Screenshot_20200701-175544.jpg?token=AMCAHKWV2CUCQ64RDGCVIWC7ABUZE)
-- ![6](https://media.githubusercontent.com/media/mentoster/PuzzelMuzzel/master/Screenshots/Screenshot_20200701-175615.jpg?token=AMCAHKSAKQKXBJJECTHNJ4S7ABUZ6)
-- ![7](https://media.githubusercontent.com/media/mentoster/PuzzelMuzzel/master/Screenshots/Screenshot_20200703-160550.jpg?token=AMCAHKUT3D6XPT3QTV2TUI27ABU2K)
-- ![8](https://media.githubusercontent.com/media/mentoster/PuzzelMuzzel/master/Screenshots/Screenshot_20200703-160559.jpg?token=AMCAHKWY72TMIEVRW5YCYDC7ABU26)
+1. [screenshots](https://github.com/mentoster/PuzzelMuzzel/tree/master/Screenshots)
