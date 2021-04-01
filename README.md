@@ -1,5 +1,5 @@
 # 15 Puzzle Muzzle
-My fisrt game for GP.
+My fisrt game for GP. (sorry for bad code, it is old game)
 ## Description:
 ►Updated simple  15-puzzle game, where you can choose your own photo as a puzzle.
 In this game, you can:
@@ -19,4 +19,6 @@ Put your photo on the puzzle, and collect the puzzle from the photo
 - Use the back gesture to exit back.
 - Dont smoke!
 ## Screenshots
-1. [screenshots](https://github.com/mentoster/PuzzelMuzzel/tree/master/Screenshots)
+1. [other screenshots](https://github.com/mentoster/PuzzelMuzzel/tree/master/Screenshots)
+![image](https://user-images.githubusercontent.com/50594730/113265465-d5a8c500-92dc-11eb-9800-ac83433b9190.png)
+
